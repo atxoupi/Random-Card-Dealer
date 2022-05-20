@@ -1,1 +1,44 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+
+/*.card {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  width: 300px;
+  height: 400px;
+  border-radius: 14px;
+}
+
+#valor {
+  position: relative;
+  top: 80px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 150px;
+}
+#paloSup {
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  margin-top: 0px;
+  text-align: left;
+  width: 90%;
+  font-size: 100px;
+}
+
+#paloInf {
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  text-align: right;
+  width: 90%;
+  font-size: 100px;
+}
+
+#refresh {
+  margin-top: 2px;
+}*/
