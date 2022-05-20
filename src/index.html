@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="/workspace/vanillajs-hello/src/style.css" />
   </head>
   <body>
-    <div class="container  text-center">
-      <div class="h-75 w-50 justify-content-center bg-white ">
-        <div class="d-flex justify-content-start " id="paloSup"></div>
-        <div class="d-flex justify-content-center " id="valor"></div>
-        <div class="d-flex justify-content-end " id="paloInf"></div>
+    <div
+      class="container-fluid d-flex align-items-center flex-column  h-100 w-100 bg-success min-vh-100"
+    >
+      <div class="m-5 w-25 bg-white shadow-lg p-3 mb-5 bg-body rounded-3">
+        <div
+          class="d-flex align-content-start h-100 display-1"
+          id="paloSup"
+        ></div>
+        <div
+          class="d-flex justify-content-center h-100 display-1"
+          id="valor"
+        ></div>
+        <div
+          class="d-flex justify-content-end h-100 display-1"
+          id="paloInf"
+        ></div>
       </div>
       <div>
-        <button id="refresh">Actualiza</button>
+        <button class="btn btn-outline-light" id="refresh">
+          Actualiza
+        </button>
       </div>
     </div>
     <script src="/workspace/vanillajs-hello/src/app.js"></script>
