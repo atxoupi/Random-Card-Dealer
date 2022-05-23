@@ -9,7 +9,7 @@
   </head>
   <body>
     <div
-      class="container-fluid d-flex align-items-center flex-column bg-success min-vh-100"
+      class="container-fluid d-flex align-items-center flex-column bg-success bg-gradient min-vh-100"
     >
       <div class="m-5 bg-white shadow-lg p-3 mb-5 bg-body rounded-3" id="card">
         <div
@@ -17,7 +17,7 @@
           id="paloSup"
         ></div>
         <div
-          class="h-50 d-flex justify-content-center align-middle display-1 text-center "
+          class="h-50 py-auto d-flex justify-content-center align-items-center display-1 text-center "
           id="valor"
         ></div>
         <div
@@ -27,9 +27,10 @@
       </div>
       <div>
         <button class="btn btn-outline-light" id="refresh">
-          Actualiza
+          Barajar
         </button>
       </div>
+      <div class="bg-warning p-2 m-2 rounded-3" id="countdown"></div>
     </div>
     <script src="/workspace/vanillajs-hello/src/app.js"></script>
   </body>

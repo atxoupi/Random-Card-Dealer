@@ -6,13 +6,17 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = barajar();
+let carta = document.getElementById("card");
 let boton = document.getElementById("refresh");
 boton.addEventListener("click", barajar);
+carta.addEventListener("mousemove", spin);
+carta.addEventListener("mouseleave", stopSpin);
+let totalTime = 10;
+let myInterval = setInterval(updateClock, 1000);
 
 function barajar() {
   //write your code here
   let palo = Math.floor(Math.random() * 4) + 1;
-  let carta = document.getElementById("card");
   let head = document.getElementById("paloSup");
   let body = document.getElementById("valor");
   let footer = document.getElementById("paloInf");
@@ -61,4 +65,31 @@ function barajar() {
       break;
   }
 }
+
+function updateClock() {
+  document.getElementById("countdown").innerHTML = totalTime;
+  if (totalTime === 0) {
+    barajar();
+    clearInterval(myInterval);
+    totalTime = 10;
+    document.getElementById("countdown").innerHTML = "Fin!!!!";
+  } else {
+    totalTime--;
+  }
+}
+function spin() {
+  let clase = "spinner-border ";
+  clase += carta.getAttribute("class");
+  carta.setAttribute("class", `${clase}`);
+}
+
+function stopSpin() {
+  carta.removeAttribute("class");
+  carta.setAttribute(
+    "class",
+    "m-5 bg-white shadow-lg p-3 mb-5 bg-body rounded-3"
+  );
+}
+
 //♦ ♥ ♠ ♣
+//
