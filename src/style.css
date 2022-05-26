@@ -3,3 +3,12 @@
   width: 300px;
   height: 400px;
 }
+
+body {
+  background-color: black;
+  background-image: url("https://media.istockphoto.com/vectors/dark-seamless-vector-background-with-3d-effect-vector-id476618574?k=20&m=476618574&s=612x612&w=0&h=pGs8_mvcNKfP7H2fZiymJ6VhhpVlutFsSd3sOfRDgZM=");
+}
+
+#paloInf {
+  transform: rotate(180deg);
+}

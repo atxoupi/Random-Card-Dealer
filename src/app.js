@@ -11,8 +11,16 @@ let boton = document.getElementById("refresh");
 boton.addEventListener("click", barajar);
 carta.addEventListener("mousemove", spin);
 carta.addEventListener("mouseleave", stopSpin);
-let totalTime = 10;
-let myInterval = setInterval(updateClock, 1000);
+let totalTime = 5;
+let botonrev = document.getElementById("countdown");
+let myInterval;
+botonrev.addEventListener("click", function() {
+  myInterval = setInterval(updateClock, 1000);
+});
+let botonform = document.querySelector("#button-addon2");
+botonform.addEventListener("click", redimensionar);
+let botonrestaurar = document.querySelector("#restaurar");
+botonrestaurar.addEventListener("click", restaurar);
 
 function barajar() {
   //write your code here
@@ -71,8 +79,8 @@ function updateClock() {
   if (totalTime === 0) {
     barajar();
     clearInterval(myInterval);
-    totalTime = 10;
-    document.getElementById("countdown").innerHTML = "Fin!!!!";
+    totalTime = 5;
+    document.getElementById("countdown").innerHTML = "Cuenta Atrás";
   } else {
     totalTime--;
   }
@@ -89,6 +97,18 @@ function stopSpin() {
     "class",
     "m-5 bg-white shadow-lg p-3 mb-5 bg-body rounded-3"
   );
+}
+
+function redimensionar() {
+  let alto = document.getElementById("alto").value;
+  let ancho = document.getElementById("ancho").value;
+
+  carta.style.width = `${ancho}px`;
+  carta.style.height = `${alto}px`;
+}
+function restaurar() {
+  carta.style.width = "300px";
+  carta.style.height = "400px";
 }
 
 //♦ ♥ ♠ ♣
